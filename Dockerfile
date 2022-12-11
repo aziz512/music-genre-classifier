@@ -5,6 +5,7 @@ ENV NUMBA_CACHE_DIR=/tmp/numba_cache
 
 COPY . .
 COPY requirements.txt .
+RUN mkdir ./web/temp_files
 RUN chmod 777 ./web/temp_files
 
 RUN pip install --upgrade pip \
