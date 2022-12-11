@@ -1,13 +1,17 @@
-from utils import predict_song
 import sys
+sys.path.append('../')
+
+from utils import predict_song
 import os
 from flask import Flask, request, flash, redirect, send_file
 from tensorflow import keras
 
-sys.path.append('../')
 
 
-loaded_model = keras.models.load_model('../best_model_colab.h5')
+dir_path = os.path.dirname(os.path.realpath(__file__))
+parent_dir = os.path.abspath(os.path.join(dir_path, '..'))
+
+loaded_model = keras.models.load_model(parent_dir + '/best_model_colab.h5')
 
 app = Flask(__name__)
 
