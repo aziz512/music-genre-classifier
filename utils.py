@@ -57,8 +57,6 @@ def predict_using_model(X, model, verbose=0):
 
 
 def predict_song(file_path, model, verbose=0):
-    file_path = "Sierra Ferrell - Hey Me, Hey Mama (Official Audio).mp3"
-
     samples, sr = librosa.load(file_path)
 
     slices = slice_audio(samples)
