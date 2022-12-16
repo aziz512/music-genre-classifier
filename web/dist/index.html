@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="main">
+        <a href="index.html" id="logo-container">
+            <img src="logo.png" alt="" id="logo">
+        </a>
+        <form action="/analyze" method='post' enctype=multipart/form-data>
+            <div>
+                <p>
+                    This is a music classifier that can predict the genre of a music file based on its audio content.
+                </p>
+                <p>
+                    To use it, simply select a music file below and press "Analyze".
+                </p>
+            </div>
+            <input type="file" name='file'  accept="audio/*">
+            <div>
+                <input type="submit" id="submit-button" value="Analyze">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
